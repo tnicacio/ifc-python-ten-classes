@@ -4,7 +4,7 @@
 > Implementação de 10 classes relacionadas
 
 ## :octocat: Diagrama de classes
-![diagrama-uml](https://user-images.githubusercontent.com/50798315/150056774-0ececafc-b49a-4b17-96ca-4708a3c59bc7.png)
+![diagrama-uml](https://user-images.githubusercontent.com/50798315/150057313-808491ea-3dbd-424f-8d7b-8d63c7ddc8e4.png)
 
 ## :computer: Como testar?
 
