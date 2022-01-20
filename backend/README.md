@@ -20,7 +20,7 @@ Após isso, o backend irá rodar na porta 5000.
 
 ## :motorway: Rotas Disponíveis
 
-### :standing_person: Users (Pessoas)
+### :standing_person: Users (Usuários)
 
 #### [GET] /users
 > Para ver a lista de usuários cadastrados
