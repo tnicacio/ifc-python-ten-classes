@@ -8,7 +8,7 @@
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 			integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<title>Course Registration</title>
+	<title>User Registration</title>
 </head>
 
 <body>
@@ -21,14 +21,13 @@
 			</div>
 			
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<span class="navbar-text">Course Registration</span>
+				<span class="navbar-text">User Registration</span>
 				
 				<div class="navbar-nav me-auto">
-					<a class="nav-item nav-link" href="#" id="link-home">Home
-						<span class="sr-only">(current)</span></a>
-					<a class="nav-item nav-link" href="#" id="link-list-courses">List</a>
-					<a class="nav-item nav-link" data-toggle="modal" 
-						data-target="#modalAddCourse" href="#">Add</a>
+					<a class="nav-item nav-link" href="#" id="link-home">Home<span class="sr-only">(current)</span></a>
+					<a class="nav-item nav-link" href="#" id="link-list-roles">Roles</a>
+					<a class="nav-item nav-link" href="#" id="link-list-users">Users</a>
+					<a class="nav-item nav-link" data-toggle="modal" data-target="#modalAddUser" href="#">Add User</a>
 				</div>
 			</div>
 
@@ -42,16 +41,16 @@
 		<div id="page-body">
 
 			<div id="initial-content" class="invisible">
-				Welcome to the course registration page.
+				Welcome to the user registration page.
 			</div>
 
-			<!-- Modal window for course registration -->
-			<div class="modal fade" id="modalAddCourse" tabindex="-1" role="dialog"
+			<!-- Modal window for User registration -->
+			<div class="modal fade" id="modalAddUser" tabindex="-1" role="dialog"
 				aria-labelledby="exampleModalLabel" aria-hidden="true">
 				<div class="modal-dialog" role="document">
 					<div class="modal-content">
 						<div class="modal-header">
-								<h5 class="modal-title" id="exampleModalLabel">New Course</h5>
+								<h5 class="modal-title" id="exampleModalLabel">New User</h5>
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 									<span aria-hidden="true">&times;</span>
 								</button>
@@ -59,45 +58,58 @@
 						<div class="modal-body">
 							<form>
 								<div class="form-group">
-									<label for="course-name">Name</label>
-									<input type="text" class="form-control" id="course-name"
-											aria-describedby="name-help" placeholder="My Awesome Course">
-									<small id="name-help" class="form-text text-muted">Course name</small>
+									<label for="user-name">Name</label>
+									<input type="text" class="form-control" id="user-name"
+											aria-describedby="name-help" placeholder="John Doe">
 								</div>
 								<div class="form-group">
-									<label for="course-img-uri">Image URI</label>
-									<input type="text" class="form-control" id="course-img-uri"
-											aria-describedby="course-img-uri-help" placeholder="course-image.jpg">
-									<small id="course-img-uri-help" class="form-text text-muted">Course image uri</small>
+									<label for="email">E-mail</label>
+									<input type="email" class="form-control" id="email"
+											aria-describedby="email-help" placeholder="email@mail.com">
 								</div>
 								<div class="form-group">
-									<label for="course-img-uri-gray">Image URI - Course Completed</label>
-									<input type="text" class="form-control" id="course-img-uri-gray"
-											aria-describedby="course-img-uri-gray-help" placeholder="course-image-when-course-completed.jpg">
-									<small id="course-img-uri-gray-help" class="form-text text-muted">Course grayish image to be displayed when course is completed</small>
+									<label for="password">Password</label>
+									<input type="password" class="form-control" id="password"
+											aria-describedby="password-help" placeholder="******">
+								</div>
+								<div class="form-group">
+									<label for="user-role">Role</label>
+									<input type="text" class="form-control" id="user-role"
+											aria-describedby="role-help" placeholder="1">
 								</div>
 							</form>
 						</div>
 
 						<div class="modal-footer">
 							<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-							<button id="btn-add-course" type="button" class="btn btn-primary">Add</button>
+							<button id="btn-add-user" type="button" class="btn btn-primary">Add</button>
 						</div>
 					</div>
 				</div>
 			</div>
 
-			<!-- Course list table -->
-			<table class="table invisible table-striped table-hover" id="courses-table">
-					<thead>
-							<tr>
-									<th scope="col">Name</th>
-									<th scope="col">Image URI</th>
-									<th scope="col">Image Gray URI</th>
-							</tr>
-					</thead>
-					<tbody id="courseTableBody">
-					</tbody>
+			<!-- Role list table -->
+			<table class="table invisible table-striped table-hover" id="roles-table">
+				<thead>
+					<tr>
+						<th scope="col">Id</th>
+						<th scope="col">Authority</th>
+					</tr>
+				</thead>
+				<tbody id="roleTableBody"></tbody>
+			</table>
+
+			<!-- User list table -->
+			<table class="table invisible table-striped table-hover" id="users-table">
+				<thead>
+					<tr>
+						<th scope="col">Id</th>
+						<th scope="col">Name</th>
+						<th scope="col">E-mail</th>
+						<th scope="col">Role</th>
+					</tr>
+				</thead>
+				<tbody id="userTableBody"></tbody>
 			</table>
 
 		</div>
@@ -112,7 +124,7 @@
 			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
 			crossorigin="anonymous"></script>
 	<!-- código específico do front-end -->
-	<script src="js/courses.js"></script>
+	<script src="js/scripts.js"></script>
 </body>
 
 </html>

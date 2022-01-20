@@ -10,5 +10,3 @@ P
  controller/student_controller.py,1\c\1cf1b2a3da53f16f103463e9915085b2f05a5c6e
 P
  controller/subject_controller.py,6\b\6b16fcaddb61f47a9a3ea693a376670c56950af4
-9
-	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d

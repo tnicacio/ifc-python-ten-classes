@@ -14,11 +14,9 @@ def find_role_by_id(role_id):
 
 @app.route("/roles")
 def find_roles():
-
     roles = RoleService.find_all()
     roles_in_json = [role.to_json() for role in roles]
     response = jsonify(roles_in_json)
-
     response.headers.add("Access-Control-Allow-Origin", "*")
     return response
 
@@ -28,7 +26,6 @@ def insert_role():
     new_role = RoleService.insert(request.get_json())
     if 'error' in new_role:
         return jsonify({"result": "error", "details": new_role['error']})
-
     response = jsonify(new_role)
     response.headers.add("Access-Control-Allow-Origin", "*")
     return response

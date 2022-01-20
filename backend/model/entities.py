@@ -67,6 +67,7 @@ class User(db.Model):
     password = db.Column(db.String(255), nullable=False)
     # Cargo
     role_id = db.Column(db.Integer, db.ForeignKey(Role.id), nullable=False)
+    role = db.relationship("Role")
     # Notificações
     notifications = db.relationship("Notification", back_populates="user")
     # Tópicos
@@ -81,6 +82,7 @@ class User(db.Model):
             'email': self.email,
             'password': self.password,
             'roleId': self.role_id,
+            'role': self.role.to_json(),
             'notifications': [notification.to_json() for notification in self.notifications]
         }
 
