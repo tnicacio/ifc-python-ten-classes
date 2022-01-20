@@ -1,1 +1,1 @@
-__all__ = ['person_service', 'subject_service', 'student_service']
+__all__ = ['user_service', 'role_service']

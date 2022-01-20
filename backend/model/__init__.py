@@ -1,1 +1,1 @@
-__all__ = ['person', 'subject', 'student']
+__all__ = ['entities']

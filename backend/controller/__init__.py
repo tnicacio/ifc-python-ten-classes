@@ -1,1 +1,1 @@
-__all__ = ['person_controller', 'subject_controller', 'student_controller']
+__all__ = ['user_controller', 'role_controller']

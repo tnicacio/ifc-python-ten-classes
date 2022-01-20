@@ -1,30 +1,14 @@
 
-@
-requirements.txt,1\9\19359a61ae2446b51b549167b014da2fcf265768
-9
-	config.py,1\a\1a1b9769344cb239f2e540e1e6ee1efa2d3034ea
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
-A
-model/__init__.py,8\5\856bddc8fd3cefd6e9499ea45d0f52219e17a7e2
-C
-service/__init__.py,0\4\04759a70d648a2307c9ac857e979e5bc4b452f59
-I
-service/person_service.py,6\8\6813610de5904833695901cc866c2e858c620fec
 J
 service/subject_service.py,8\a\8ae02785f5ff05912622e40cd63ccf5a62642694
 J
 service/student_service.py,2\d\2d05485c6c37b85b7bef21a6512294c704d085e9
-F
-controller/__init__.py,b\1\b1cfbb59f83425610ac4fcf78fe4a13dc4d82e8e
 P
  controller/student_controller.py,1\c\1cf1b2a3da53f16f103463e9915085b2f05a5c6e
 P
  controller/subject_controller.py,6\b\6b16fcaddb61f47a9a3ea693a376670c56950af4
-O
-controller/person_controller.py,e\0\e06494405e003d4bfa284bfbab91a835362c8c58
 9
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
-?
-model/person.py,3\2\32ab241c14e38234fe868970ad867033833fbc0b
