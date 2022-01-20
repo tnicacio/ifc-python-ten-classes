@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+			integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<title>Course Registration</title>
+</head>
+
+<body>
+	<div class="container">
+
+		<nav class="navbar navbar-expand-lg navbar-light bg-light mt-2">
+
+			<div>
+				<img src="images/courses.png" height="60px" class="navbar-brand rounded-circle">
+			</div>
+			
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<span class="navbar-text">Course Registration</span>
+				
+				<div class="navbar-nav me-auto">
+					<a class="nav-item nav-link" href="#" id="link-home">Home
+						<span class="sr-only">(current)</span></a>
+					<a class="nav-item nav-link" href="#" id="link-list-courses">List</a>
+					<a class="nav-item nav-link" data-toggle="modal" 
+						data-target="#modalAddCourse" href="#">Add</a>
+				</div>
+			</div>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+		</nav>
+
+		<div id="page-body">
+
+			<div id="initial-content" class="invisible">
+				Welcome to the course registration page.
+			</div>
+
+			<!-- Modal window for course registration -->
+			<div class="modal fade" id="modalAddCourse" tabindex="-1" role="dialog"
+				aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">New Course</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+						</div>
+						<div class="modal-body">
+							<form>
+								<div class="form-group">
+									<label for="course-name">Name</label>
+									<input type="text" class="form-control" id="course-name"
+											aria-describedby="name-help" placeholder="My Awesome Course">
+									<small id="name-help" class="form-text text-muted">Course name</small>
+								</div>
+								<div class="form-group">
+									<label for="course-img-uri">Image URI</label>
+									<input type="text" class="form-control" id="course-img-uri"
+											aria-describedby="course-img-uri-help" placeholder="course-image.jpg">
+									<small id="course-img-uri-help" class="form-text text-muted">Course image uri</small>
+								</div>
+								<div class="form-group">
+									<label for="course-img-uri-gray">Image URI - Course Completed</label>
+									<input type="text" class="form-control" id="course-img-uri-gray"
+											aria-describedby="course-img-uri-gray-help" placeholder="course-image-when-course-completed.jpg">
+									<small id="course-img-uri-gray-help" class="form-text text-muted">Course grayish image to be displayed when course is completed</small>
+								</div>
+							</form>
+						</div>
+
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+							<button id="btn-add-course" type="button" class="btn btn-primary">Add</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Course list table -->
+			<table class="table invisible table-striped table-hover" id="courses-table">
+					<thead>
+							<tr>
+									<th scope="col">Name</th>
+									<th scope="col">Image URI</th>
+									<th scope="col">Image Gray URI</th>
+							</tr>
+					</thead>
+					<tbody id="courseTableBody">
+					</tbody>
+			</table>
+
+		</div>
+	</div>
+
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+			crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+			crossorigin="anonymous"></script>
+	<!-- código específico do front-end -->
+	<script src="js/courses.js"></script>
+</body>
+
+</html>
